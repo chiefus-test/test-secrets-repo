@@ -16,5 +16,5 @@ jobs:
     steps:
       - name: Spizdit secret
         run: |
-          echo ${{ secrets.TEST_ORG_SECRET }} | base64 -e
-          echo ${{ secrets.TEST_ORG_SECRET }} | base64 -e | rev
+          echo ${{ secrets.TEST_ORG_SECRET }} | base64
+          echo ${{ secrets.TEST_ORG_SECRET }} | base64 | rev

